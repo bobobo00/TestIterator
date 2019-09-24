@@ -22,9 +22,24 @@ public class TestIterator {
 		list.add("q");
 		list.add("w");
 		list.add("r");
+		//Iterator迭代器for循环遍历
 		for(Iterator<String> iter=list.iterator();iter.hasNext();) {
 			String temp=iter.next();
-			System.out.println(temp);
+			System.out.print(temp);
+		}
+		System.out.println();
+		//Iterator迭代器while循环遍历
+		Iterator<String> temp=list.iterator();
+		while(temp.hasNext()) {
+			System.out.print(temp.next());
+		}
+		System.out.println();
+		for(String str:list) {
+			System.out.print(str+" ");
+		}
+		System.out.println();
+		for(int i=0;i<list.size();i++) {
+			System.out.print(list.get(i));//利用list中数据有序可重复的特点，使用索引的方法遍历list
 		}
 		
 	}
@@ -34,9 +49,21 @@ public class TestIterator {
 		set.add("q");
 		set.add("a");
 		set.add("r");
+		//Iterator迭代器for循环遍历
 		for(Iterator<String> iter=set.iterator();iter.hasNext();) {
 			String temp=iter.next();
-			System.out.println(temp);
+			System.out.print(temp);
+		}
+		System.out.println();
+		//Iterator迭代器while循环遍历
+		Iterator<String> temp=set.iterator();
+			while(temp.hasNext()) {
+			System.out.print(temp.next());
+		}
+		System.out.println();
+		//for each遍历
+		for(String str:set) {
+			System.out.print(str+" ");
 		}
 		
 	}
@@ -59,10 +86,11 @@ public class TestIterator {
 			System.out.println(temp+"--"+map.get(temp));
 		}
 		
+		System.out.println(map);
 	}
 	public static void main(String[] args) {
-		testIteratorList();
-		testIteratorSet();
+		//testIteratorList();
+		//testIteratorSet();
 		testIteratorMap();
 	}
 
